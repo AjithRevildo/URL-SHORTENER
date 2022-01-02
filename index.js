@@ -61,7 +61,6 @@ app.get('/delete/:id',function(req,res){
           console.log(err);
      })
 })
-
-app.listen(3000, function() {
-  console.log("The app is listening in PORT 3000");
+let port = process.env.PORT || 3000;
+app.listen(port,()=> {console.log(`The app is listening in PORT ${port}`);
 });
